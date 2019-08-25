@@ -1,0 +1,191 @@
+// Reset
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0;
+	padding: 0;
+	border: 0
+	font-size: 1rem
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+body
+	line-height: 1
+
+ol, ul 
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+*, :before, :after
+  box-sizing: border-box
+
+// End of reset
+
+// Colors
+$red: #FF3E4A
+$darkRed: #46DB62
+$lightRed: #F2594B
+$green: #23C75D
+$darkGreen: #00B258
+$lightGreen: #46DB62
+$white: #FFFFFF
+$gray1: #EEEEEE
+$gray2: #888888
+$black: #000000
+
+// End of colors
+
+// Resources
+=transition($what: all, $time: 0.15s, $how: ease)
+  -webkit-transition: $what $time $how
+  -moz-transition:    $what $time $how
+  -ms-transition:     $what $time $how
+  -o-transition:      $what $time $how
+  transition:         $what $time $how
+
+=transform($property)
+  -webkit-transform: $property
+  -moz-transform:    $property
+  -ms-transform:     $property
+  -o-transform:      $property
+  transform:         $property
+
+=redGradientBG($direction: 90deg, $from: #F22248, $to: #F2594B)
+  background: $green /* Old browsers */
+  background: -moz-linear-gradient($direction,  $from 0%, $to 100%) /* FF3.6-15 */
+  background: -webkit-linear-gradient($direction,  $from 0%,$to 100%) /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($direction,  $from 0%,$to 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ) /* IE6-9 */
+
+=greenGradientBG($direction: 90deg, $from: #46DB62, $to: #00B258)
+  background: $red /* Old browsers */
+  background: -moz-linear-gradient($direction,  $from 0%, $to 100%) /* FF3.6-15 */
+  background: -webkit-linear-gradient($direction,  $from 0%,$to 100%) /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($direction,  $from 0%,$to 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ) /* IE6-9 */
+
+.mw-650px
+  max-width: 650px
+
+.shadows
+  -webkit-box-shadow: 0px 20px 52px -30px rgba(0,0,0,0.5)
+  -moz-box-shadow: 0px 20px 52px -30px rgba(0,0,0,0.5)
+  box-shadow: 0px 20px 52px -30px rgba(0,0,0,0.5)
+
+.roundeds
+  border-radius: 10px
+
+.fontGray
+  color: $gray2
+
+.underlineGreen
+  position: relative
+  margin: 0
+  padding: 0
+  &::before
+    content: ''
+    position: absolute
+    bottom: 15%
+    left: -0.25rem
+    right: -0.25rem
+    height: 25%
+    background-color: $lightGreen
+    z-index: -1
+
+// End of resources
+
+body, html 
+  height: 100%
+  font-family: 'Roboto', sans-serif
+
+a
+  color: #F22248
+  +transition()
+
+#topGradientBar
+  display: block
+  height: 7px;
+  +redGradientBG()
+
+#barDesktop
+  padding-top: 1rem
+  padding-bottom: 1rem
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  box-sizing: border-box
+
+#menuIcon
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  width: 2rem
+  height: 2rem
+  cursor: pointer
+  padding: 0.2rem 0rem 0.2rem 0.5rem
+  margin: 0 !important
+
+  span
+    align-self: flex-end
+    position: relative
+    display: block
+    height: 3px
+    margin: 2px 0
+    background-color: #000
+    +transition()
+
+  #span-1
+    width: 110%
+
+  #span-2
+    width: 60%
+
+  #span-3
+    width: 80%
+
+  &:hover
+    span
+      background-color: #F22248
+
+    #span-1
+      width: 90%
+
+    #span-2
+      width: 90%
+
+    #span-3
+      width: 90%
+
+#menu2
+  position: absolute
+  background-color: #eee
+  width: 300px
+  top: 0
+  right: -300px
+
+#titleHeader
+  font-size: 2.5rem
+  font-weight: bold
+
+#subtitleHeader
+  line-height: 2rem
+
+#iphonesContainer
+  margin-top: -6rem
+  display: flex
+  justify-content: flex-end
+  max-height: 400px

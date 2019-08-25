@@ -1,0 +1,201 @@
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mw-650px {
+  max-width: 650px;
+}
+
+.shadows {
+  -webkit-box-shadow: 0px 20px 52px -30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 20px 52px -30px rgba(0, 0, 0, 0.5);
+}
+
+.roundeds {
+  border-radius: 10px;
+}
+
+.fontGray {
+  color: #888888;
+}
+
+.underlineGreen {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.underlineGreen::before {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  left: -0.25rem;
+  right: -0.25rem;
+  height: 25%;
+  background-color: #46DB62;
+  z-index: -1;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #F22248;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+#topGradientBar {
+  display: block;
+  height: 7px;
+  background: #23C75D;
+  background: -webkit-gradient(linear, left top, right top, from(#F22248), to(#F2594B));
+  background: linear-gradient(90deg, #F22248 0%, #F2594B 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+}
+
+#barDesktop {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#menuIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  padding: 0.2rem 0rem 0.2rem 0.5rem;
+  margin: 0 !important;
+}
+
+#menuIcon span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+  display: block;
+  height: 3px;
+  margin: 2px 0;
+  background-color: #000;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+#menuIcon #span-1 {
+  width: 110%;
+}
+
+#menuIcon #span-2 {
+  width: 60%;
+}
+
+#menuIcon #span-3 {
+  width: 80%;
+}
+
+#menuIcon:hover span {
+  background-color: #F22248;
+}
+
+#menuIcon:hover #span-1 {
+  width: 90%;
+}
+
+#menuIcon:hover #span-2 {
+  width: 90%;
+}
+
+#menuIcon:hover #span-3 {
+  width: 90%;
+}
+
+#menu2 {
+  position: absolute;
+  background-color: #eee;
+  width: 300px;
+  top: 0;
+  right: -300px;
+}
+
+#titleHeader {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#subtitleHeader {
+  line-height: 2rem;
+}
+
+#iphonesContainer {
+  margin-top: -6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  max-height: 400px;
+}
+/*# sourceMappingURL=main.css.map */
