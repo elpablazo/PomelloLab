@@ -1,15 +1,11 @@
 var menuIcon = document.getElementById("menuIcon")
-var menu = document.getElementById("menu2")
 
-menuOpen = function() { 
-    TweenMax.to(
-        menu, 0.5, {
-            right: "0px",
-            ease: Power2.easeInOut
-        }
-    );
-};
-
-menuIcon.onclick = function(){ 
-    menuOpen().reversed( menuOpen().reversed() );
-};
+var menuOpen = new TimelineMax({paused:false, reversed:true})
+    
+    menuOpen
+    .to("#menuIcon", .25, {transformOrigin: "right 50px", ease:Power2.easeInOut}, "cross")
+    .to("#menu2", 0.25, {width: "350px", ease:Power2.easeInOut})
+    
+    function menuIn() {
+        menuOpen.reversed() ? menuOpen.play() : menuOpen.reverse(); 
+    }

@@ -6,6 +6,8 @@ html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acro
 	font-size: 1rem
 	font: inherit
 	vertical-align: baseline
+  overflow: hidden
+  position: relative
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
@@ -13,6 +15,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body
 	line-height: 1
+  width: 100%
 
 ol, ul 
 	list-style: none
@@ -109,10 +112,13 @@ $black: #000000
 body, html 
   height: 100%
   font-family: 'Roboto', sans-serif
+  color: #000000
 
 a
   color: #F22248
   +transition()
+
+
 
 #topGradientBar
   display: block
@@ -138,6 +144,7 @@ a
   cursor: pointer
   padding: 0.2rem 0rem 0.2rem 0.5rem
   margin: 0 !important
+  z-index: 200
 
   span
     align-self: flex-end
@@ -172,13 +179,17 @@ a
 
 #menu2
   position: absolute
-  background-color: #eee
-  width: 300px
+  display: block
+  overflow: hidden
+  box-sizing: border-box
+  background-color: #fff
+  width: 0
+  height: 100vh
   top: 0
-  right: -300px
+  right: 0
 
 #titleHeader
-  font-size: 2.5rem
+  font-size: 2.75rem
   font-weight: bold
 
 #subtitleHeader
@@ -189,3 +200,11 @@ a
   display: flex
   justify-content: flex-end
   max-height: 400px
+  
+
+#hero img
+  position: absolute
+  height: 225vh
+  right: 0
+  top: 100
+  z-index: -1
