@@ -133,7 +133,7 @@ a
   justify-content: space-between
   box-sizing: border-box
 
-#menuIcon
+#menuIconBurger, #menuIconCross
   display: flex
   align-items: center
   justify-content: center
@@ -142,10 +142,9 @@ a
   width: 2rem
   height: 2rem
   cursor: pointer
-  padding: 0.2rem 0rem 0.2rem 0.5rem
   margin: 0 !important
-  z-index: 200
 
+#menuIconBurger
   span
     align-self: flex-end
     position: relative
@@ -155,6 +154,8 @@ a
     background-color: #000
     +transition()
 
+  padding: 0.2rem 0rem 0.2rem 0.5rem
+
   #span-1
     width: 110%
 
@@ -163,6 +164,38 @@ a
 
   #span-3
     width: 80%
+
+  &:hover
+    span
+      background-color: #F22248
+
+    #span-1
+      width: 90%
+
+    #span-2
+      width: 90%
+
+    #span-3
+      width: 90%
+
+#menuIconCross
+  span
+    align-self: center
+    position: relative
+    display: block
+    height: 3px
+    background-color: #000
+    +transition()
+
+  padding: 0
+
+  #span-1
+    width: 100%
+    +transform(rotate(-45deg))
+
+  #span-2
+    width: 100%
+    +transform(rotate(45deg))
 
   &:hover
     span
@@ -187,6 +220,7 @@ a
   height: 100vh
   top: 0
   right: 0
+  z-index: 1
 
 #titleHeader
   font-size: 2.75rem

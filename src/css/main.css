@@ -114,7 +114,7 @@ a {
           box-sizing: border-box;
 }
 
-#menuIcon {
+#menuIconBurger, #menuIconCross {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,12 +131,14 @@ a {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
-  padding: 0.2rem 0rem 0.2rem 0.5rem;
   margin: 0 !important;
-  z-index: 200;
 }
 
-#menuIcon span {
+#menuIconBurger {
+  padding: 0.2rem 0rem 0.2rem 0.5rem;
+}
+
+#menuIconBurger span {
   -ms-flex-item-align: end;
       align-self: flex-end;
   position: relative;
@@ -148,31 +150,75 @@ a {
   transition: all 0.15s ease;
 }
 
-#menuIcon #span-1 {
+#menuIconBurger #span-1 {
   width: 110%;
 }
 
-#menuIcon #span-2 {
+#menuIconBurger #span-2 {
   width: 60%;
 }
 
-#menuIcon #span-3 {
+#menuIconBurger #span-3 {
   width: 80%;
 }
 
-#menuIcon:hover span {
+#menuIconBurger:hover span {
   background-color: #F22248;
 }
 
-#menuIcon:hover #span-1 {
+#menuIconBurger:hover #span-1 {
   width: 90%;
 }
 
-#menuIcon:hover #span-2 {
+#menuIconBurger:hover #span-2 {
   width: 90%;
 }
 
-#menuIcon:hover #span-3 {
+#menuIconBurger:hover #span-3 {
+  width: 90%;
+}
+
+#menuIconCross {
+  padding: 0;
+}
+
+#menuIconCross span {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  display: block;
+  height: 3px;
+  background-color: #000;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+#menuIconCross #span-1 {
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#menuIconCross #span-2 {
+  width: 100%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#menuIconCross:hover span {
+  background-color: #F22248;
+}
+
+#menuIconCross:hover #span-1 {
+  width: 90%;
+}
+
+#menuIconCross:hover #span-2 {
+  width: 90%;
+}
+
+#menuIconCross:hover #span-3 {
   width: 90%;
 }
 
@@ -187,6 +233,7 @@ a {
   height: 100vh;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 #titleHeader {
