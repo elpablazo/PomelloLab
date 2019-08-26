@@ -1,7 +1,7 @@
 // Reset
 html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-	margin: 0;
-	padding: 0;
+	margin: 0
+	padding: 0
 	border: 0
 	font-size: 1rem
 	font: inherit
@@ -38,7 +38,7 @@ table
 
 // Colors
 $red: #FF3E4A
-$darkRed: #46DB62
+$darkRed: #F22248
 $lightRed: #F2594B
 $green: #23C75D
 $darkGreen: #00B258
@@ -65,22 +65,30 @@ $black: #000000
   -o-transform:      $property
   transform:         $property
 
-=redGradientBG($direction: 90deg, $from: #F22248, $to: #F2594B)
+=boxShadow($horizontal: 0px, $vertical: 7px, $blur: 20px, $spread: 0px, $color: rgba(255,62,74,0.25))
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color
+     -moz-box-shadow: $horizontal $vertical $blur $spread $color
+          box-shadow: $horizontal $vertical $blur $spread $color
+
+=redGradientBG($direction: 90deg, $from: #F22248, $start: 0%, $to: #F2594B, $finish: 100%)
   background: $green /* Old browsers */
-  background: -moz-linear-gradient($direction,  $from 0%, $to 100%) /* FF3.6-15 */
-  background: -webkit-linear-gradient($direction,  $from 0%,$to 100%) /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient($direction,  $from 0%,$to 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient($direction,  $from $start, $to $finish) /* FF3.6-15 */
+  background: -webkit-linear-gradient($direction,  $from $start,$to $finish) /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($direction,  $from $start,$to $finish) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ) /* IE6-9 */
 
-=greenGradientBG($direction: 90deg, $from: #46DB62, $to: #00B258)
+=greenGradientBG($direction: 90deg, $from: #46DB62, $start: 0%, $to: #00B258, $finish: 100%)
   background: $red /* Old browsers */
-  background: -moz-linear-gradient($direction,  $from 0%, $to 100%) /* FF3.6-15 */
-  background: -webkit-linear-gradient($direction,  $from 0%,$to 100%) /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient($direction,  $from 0%,$to 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient($direction,  $from $start, $to $finish) /* FF3.6-15 */
+  background: -webkit-linear-gradient($direction,  $from $start,$to $finish) /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient($direction,  $from $start,$to $finish) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ) /* IE6-9 */
 
 .mw-650px
   max-width: 650px
+
+.spacer
+  margin: 150px 0
 
 .shadows
   -webkit-box-shadow: 0px 20px 52px -30px rgba(0,0,0,0.5)
@@ -92,6 +100,15 @@ $black: #000000
 
 .fontGray
   color: $gray2
+
+.fontWhite
+  color: $white
+
+.bgGray
+  background-color: $gray1
+
+.bgWhite
+  background-color: $white
 
 .underlineGreen
   position: relative
@@ -122,7 +139,7 @@ a
 
 #topGradientBar
   display: block
-  height: 7px;
+  height: 7px
   +redGradientBG()
 
 #barDesktop
@@ -150,7 +167,7 @@ a
     position: relative
     display: block
     height: 3px
-    margin: 2px 0
+    margin: 1.9px 0
     background-color: #000
     +transition()
 
@@ -179,22 +196,22 @@ a
       width: 90%
 
 #menuIconCross
+  align-self: center
   span
     align-self: center
-    position: relative
+    position: absolute
     display: block
-    height: 3px
+    height: 4px
+    width: 30px
     background-color: #000
     +transition()
 
   padding: 0
 
   #span-1
-    width: 100%
     +transform(rotate(-45deg))
 
   #span-2
-    width: 100%
     +transform(rotate(45deg))
 
   &:hover
@@ -202,31 +219,46 @@ a
       background-color: #F22248
 
     #span-1
-      width: 90%
+      width: 35px
 
     #span-2
-      width: 90%
-
-    #span-3
-      width: 90%
+      width: 35px
 
 #menu2
   position: absolute
-  display: block
+  display: flex
+  flex-direction: column
+  align-content: center
+  justify-content: center
   overflow: hidden
   box-sizing: border-box
   background-color: #fff
   width: 0
+  max-width: 350px
   height: 100vh
   top: 0
   right: 0
   z-index: 1
 
-#titleHeader
-  font-size: 2.75rem
+  ul
+    li
+      margin: 50px 0
+      font-size: 1.25rem
+      letter-spacing: 0.1rem
+      font-weight: bold
+      text-transform: uppercase
+
+      a
+        color: $black
+        &:hover
+          color: $red
+          text-decoration: none
+
+h1
+  font-size: 2.5rem
   font-weight: bold
 
-#subtitleHeader
+.pHeader
   line-height: 2rem
 
 #iphonesContainer
@@ -242,3 +274,30 @@ a
   right: 0
   top: 100
   z-index: -1
+
+.whiteGradient
+  height: 150px
+  +redGradientBG(0, #fff, 50%, rgba(0,0,0,0), 100%)
+
+button
+  border: none
+  color: $white
+  padding: 1rem 3rem
+  font-size: 1rem
+  letter-spacing: 0.1rem
+  font-weight: bold
+  text-transform: uppercase
+  background-color: $red
+  border-radius: 10rem
+  +boxShadow()
+  +transition()
+
+  &:hover
+    background-color: $lightRed
+    +boxShadow(0,0,0,0)
+
+footer
+  position: relative
+  height: 50vh
+  bottom: 0
+  +redGradientBG()

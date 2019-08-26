@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./src/css/main.css" />
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4f7aedd8e8.js"></script>
   </head>
   <body>
     <div class="fluid-container mb-sm-4" id="topGradientBar"></div>
@@ -19,7 +21,7 @@
     <div class="f-container pb-sm-5">
       <div class="container d-flex mt-sm-4" id="barDesktop">
         <a href="/"><img src="./src/images/logo_pomello.svg" class="img-fluid" alt="Pomello" width="200px"></a>
-        <div id="menuIconBurger" onclick="menuIn()">
+        <div class="" id="menuIconBurger" onclick="menuIn()">
           <span id="span-1"></span>
           <span id="span-2"></span>
           <span id="span-3"></span>
@@ -32,10 +34,9 @@
         <span id="span-1"></span>
         <span id="span-2"></span>
       </div>
-      <ul>
-        <li><a href="#">Inicio</a></li>
+      <ul class="text-center">
+        <li><a href="./">Inicio</a></li>
         <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contáctanos</a></li>
       </ul>
     </div>
 
@@ -45,20 +46,92 @@
 
     <div class="container mt-5">
       <div class="row">
-        <div class="col-md-6">
-          <h1 id="titleHeader">Creamos <span class="underlineGreen">estrategias</span> que venden de verdad.</h1>
-          <p id="subtitleHeader" class="fontGray mt-4">
-            Sabemos lo importante que es tener una buena imagen y una buena estrategia frente a los clientes, no importa lo que vendas. Es por esto que nosotros queremos ayudarte con estrategias reales, basadas en estadísticas, conocimiento del mercado y ayuda de una AI, a que tu producto o servicio se posicione en el nivel que merece.
+        <div class="col-md-6 text-center text-md-left">
+          <h1>Creamos <span class="underlineGreen">estrategias</span> que venden de verdad</h1>
+          <p class="pHeader fontGray my-4">
+            No importa lo que vendas, nosotros nos encargamos de posicionar a tu negocio o servicio donde merece estar a través de estrategias basadas en análisis del mercado, estadística e inteligencia artificial.
           </p>
-        </div>
-        <div class="col-md-7">
-          <h1 id="titleHeader">Conocemos el <span class="underlineGreen">mercado</span>.</h1>
-          <p id="subtitleHeader" class="fontGray mt-4">
-            Somos conscientes de lo increíblemente rápido que cambian las ten- dencias, por eso nos actualizamos constantemente, para que tú no te tengas que preocupar por estar al tanto día a día. Déjanos a nosotros el estrés y tú concéntrate en tu producto.
-          </p>
+          <button>Mira nuestro trabajo</button>
         </div>
       </div>
     </div>
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="container">
+      <p class="pHeader fontGray">
+        Clientes satisfechos:
+      </p>
+    </div>
+    <div class="bgGray fluid-container py-5">
+      <div class="container">
+        <img src="./src/images/clients.png" alt="Clientes satisfechos Pomello" class="img-fluid">
+      </div>
+    </div>
+    <div class="bgWhite fluid-container py-5">
+      <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="./src/images/carousel1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./src/images/carousel2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./src/images/carousel3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./src/images/carousel4.jpg" alt="Third slide">
+            </div>
+          </div>
+          
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Atrás</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fluid-container bgWhite">
+      <div class="container">
+        <div class="row pt-5">
+          <div class="col-md-2"></div>
+          <div class="col-md-8 text-center">
+            <h1 id="titleHeader">Conocemos el <span class="underlineGreen">mercado</span></h1>
+            <p class="pHeader fontGray mt-4">
+              Somos conscientes de lo increíblemente rápido que cambian las tendencias, por eso nos actualizamos constantemente, para que tú no te tengas que preocupar por estar al tanto día a día. Déjanos a nosotros el estrés y tú concéntrate en tu producto.
+            </p>
+            <div class="spacer"></div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="fluid-container fontWhite text-center py-5">
+        <div class="row p-0 m-0">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h1>Contáctanos</h1>
+            <h4 class="py-4">
+              <i class="fas fa-phone-alt"></i> 55 6034 8476
+            </h4>
+            <h4>
+              <i class="fas fa-envelope"></i> pomellolab@gmail.com
+            </h4>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </footer>
     
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -66,6 +139,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <!-- Vue js -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Main js -->
     <script src="./src/js/main.js"></script>
   </body>
